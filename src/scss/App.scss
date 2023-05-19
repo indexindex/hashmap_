@@ -1,0 +1,10 @@
+// ? [base] - for boilerplate code, standards
+// ? [components] - for smaller components like widgets
+// ? [utilities] - for tools and helpers
+
+@use './base/base';
+@use './base/typography';
+
+@use '../components/password-generator/password-generator';
+@use '../components/generator-options/generator-options';
+@use '../components/theme-switcher/theme-switcher';

@@ -1,0 +1,40 @@
+@use '../../scss/utilities' as *;
+
+.theme-switcher {
+    grid-row: 1 / 2;
+    display: grid;
+    justify-self: center;
+    margin-top: 1.5rem;
+
+    &--sun,
+    &--moon {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: var(--color-secondary);
+        box-sizing: content-box;
+        cursor: pointer;
+        transition: opacity .3s ease-in-out;
+    }
+
+    &--moon {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+body.light-theme .theme-switcher {
+
+    &--sun {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &--moon {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

@@ -1,0 +1,23 @@
+@use '../utilities' as *;
+
+@font-face {
+    font-family: 'VT323';
+    src: url('../../assets/font/VT323-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2;
+    text-align: center;
+}
+
+h2, span { transition: color .5s ease-in-out; }
+
+p, span { font-size: 1.2rem; }
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+}

@@ -1,0 +1,25 @@
+@use '../../scss/utilities' as *;
+
+.generator__options {
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5rem;
+    margin-top: 2rem;
+
+    &.show .copy-output,
+    &.show .clear-fields {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .copy-output,
+    .clear-fields {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--color-secondary);
+        opacity: 0;
+        pointer-events: none;
+        cursor: pointer;
+        transition: opacity .3s ease-in-out;
+    }
+}
