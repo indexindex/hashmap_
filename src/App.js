@@ -8,7 +8,6 @@ const App = () => {
     // ? initial state
     const [hashInput, setHashInput] = useState('');
     const [hashOutput, setHashOutput] = useState('');
-    const [isKeyDown, setKeyDown] = useState(false);
     const [timeoutID, setTimeoutID] = useState(null);
     const hashmapKeys = hashmapData;
 
@@ -22,12 +21,6 @@ const App = () => {
 
 
 
-    const keyDownEvent = (key) => {
-        if (isKeyDown === false && key === 'Backspace') {
-            setKeyDown(true);
-        }
-    }
-
     const setReaction = (reaction, delay) => {
         const reactionElem = document.querySelector('.generator__reaction');
         clearTimeout(timeoutID);
@@ -36,7 +29,6 @@ const App = () => {
             reactionElem.textContent = reaction;
 
             setTimeoutID(setTimeout(() => {
-                setKeyDown(false);
                 reactionElem.textContent = '';
                 setTimeoutID(null);
             }, 3000))
@@ -62,7 +54,6 @@ const App = () => {
                         hashInput={hashInput} 
                         hashOutput={hashOutput} 
                         hashmapKeys={hashmapKeys} 
-                        keyDownEvent={keyDownEvent} 
                         setReaction={setReaction} 
                         options={options}
                     />
