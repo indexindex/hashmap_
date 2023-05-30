@@ -4,7 +4,7 @@ import { ReactComponent as Eye } from '../../assets/svg/eye-solid.svg';
 const PasswordGenerator = (props) => {
     const { hashInput, hashOutput, hashmapKeys, setReaction, options } = props;
 
-    const onInputHandler = ({ target, key }) => {
+    const onInputHandler = () => {
         const reactionValue = document.querySelector('.generator__reaction').textContent;
 
         generateHashKey();
